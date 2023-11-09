@@ -94,6 +94,10 @@ body {
   }
 }
 
+.name {
+  font-family: "Permanent Marker", sans-serif !important;
+}
+
 
 /*
  * Cover
