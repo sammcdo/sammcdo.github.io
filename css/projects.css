@@ -1,0 +1,12 @@
+.card {
+    background-color: gray;
+}
+
+.card-title {
+    color: black !important;
+}
+
+.card-subtitle {
+    color: white !important; 
+}
+
