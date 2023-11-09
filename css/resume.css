@@ -1,0 +1,11 @@
+/*
+ * resume
+ */
+.resume {
+  padding: 0 1.5rem;
+}
+
+.resume .btn-lg {
+  padding: .75rem 1.25rem;
+  font-weight: 700;
+}
