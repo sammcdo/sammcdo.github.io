@@ -122,3 +122,7 @@ body {
 .mastfoot {
   color: rgba(255, 255, 255, .5);
 }
+
+.mastfoot p {
+  margin-top: 3em;
+}

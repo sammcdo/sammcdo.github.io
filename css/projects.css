@@ -10,3 +10,6 @@
     color: white !important; 
 }
 
+.card-img-top {
+    aspect-ratio: 1;
+}
