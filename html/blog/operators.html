@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+        <meta name="description" content="Portfolio" />
+        <meta name="author" content="KingMcD" />
+
+        <title>Samuel McDowell</title>
+
+        <!-- Bootstrap core CSS -->
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+            crossorigin="anonymous"
+        />
+
+        <!-- Google Fonts -->
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css?family=Permanent+Marker"
+        />
+
+        <!-- Prism -->
+        <link rel="stylesheet" href="../../css/prism/prism.css" />
+        <script src="../../css/prism/prism.js"></script>
+
+        <!-- Custom styles for this template -->
+        <link href="../../css/index.css" rel="stylesheet" />
+        <link href="../../css/projects.css" rel="stylesheet" />
+    </head>
+
+    <body class="text-center">
+        <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+            <header class="masthead">
+                <div class="inner">
+                    <h3 class="masthead-brand name">Samuel McDowell</h3>
+                    <nav class="nav nav-masthead justify-content-center">
+                        <a class="nav-link" href="../../index.html">Home</a>
+                        <a class="nav-link" href="../../html/projects.html">Projects</a>
+                        <a class="nav-link active" href="../../html/blog.html"
+                            >Blog</a
+                        >
+                        <a class="nav-link" href="../../html/resume.html"
+                            >Resume</a
+                        >
+                        <a class="nav-link" href="../../html/contact.html"
+                            >Contact</a
+                        >
+                    </nav>
+                </div>
+            </header>
+
+            <main role="main" class="inner cover">
+                <h1 class="cover-heading name">
+                    The Need for Speed: Does fewer operators improve speed in
+                    Python?
+                </h1>
+                <hr />
+
+                <div class="text-left">
+                    <h4>Introduction</h4>
+                    <p>
+                        As developers, we are always on the lookout for ways to
+                        optimize our code and make it run faster. One intriguing
+                        question that often arises is whether using fewer
+                        operators in conditional statements can actually impact
+                        the speed of Python code. In this blog post, we'll
+                        explore the nuances of Python conditionals and
+                        investigate whether simplicity in operators correlates
+                        with improved performance.
+                    </p>
+                    <h4>The Test</h4>
+                    <p>
+                        The goal of this experiment is to speed up python code
+                        by using fewer operators. To achieve this, we aim to
+                        create equivalent sets of conditions with varying
+                        numbers of operators, delving into the realm of Discrete
+                        Mathematics for a strategic approach. Leveraging De
+                        Morgan's Theorem, we can rewrite two conditional
+                        statements into equivalent yet structurally distinct
+                        forms. This operation allows us to realistically test
+                        the result of employing fewer operators and their
+                        potential influence on overall code efficiency.
+                    </p>
+                    <p>
+                        De Morgan's Theorem is a set of rules in Boolean Algebra
+                        that provides transformations for logical expressions.
+                        It describes how to negate complex logical statements
+                        involving both AND and OR operations. In simpler terms,
+                        it allows us to express the negation of a compound
+                        statement by negating its individual parts and switching
+                        the logical AND to OR (or vice versa).
+                    </p>
+                    <p>For example:</p>
+                    <ul>
+                        <li>Original Expression: not (A and B)</li>
+                        <li>
+                            Applying De Morgan's Theorem: (not A) or (not B)
+                        </li>
+                    </ul>
+                    <p>
+                        It seems likely that using fewer operators would make a
+                        significant impact on the runtime of our code. Lets
+                        write a script to test that.
+                    </p>
+                    <h4>The Code</h4>
+                    <pre class="code-box">
+                        <code class="language-python">
+#python3
+"""
+Python if logic speed testing:
+Test if an 'if' will process
+faster if it uses fewer 'gates'
+"""
+
+import time, random
+
+print("Processing long condition...")
+start = time.time()
+for i in range(0,1000):
+    # get 2 random real numbers btwn 0 and 1
+    a = random.random()
+    b = random.random()
+
+    if not (a >= 0.5) or not(b >= 0.5):
+        pass
+
+longConditionTime = time.time() - start
+
+print("Processing short condition...")
+start = time.time()
+for i in range(0,1000):
+    # get 2 random real numbers btwn 0 and 1
+    a = random.random()
+    b = random.random()
+
+    if not (a >= 0.5 and b >= 0.5):
+        pass
+
+shortConditionTime = time.time() - start
+
+print("Results:")
+print("Long Condition Time:\t%f" %longConditionTime)
+print("Short Condition Time:\t%f" %shortConditionTime)
+print("Difference:\t\t%f" %(longConditionTime-shortConditionTime))
+
+                        </code>
+                    </pre>
+
+                    <h4>The Results</h4>
+                    <p>
+                        This code compares the execution time of two similar
+                        loops that generate random real numbers between 0 and 1.
+                        The first loop has a longer condition involving two
+                        <code class="language-python">or</code>
+                        operators, while the second loop has a shorter condition
+                        using <code class="language-python">and</code>. The code
+                        measures the time it takes to process each loop and
+                        prints the results, providing insights into whether the
+                        length and structure of conditional statements impact
+                        the overall execution speed. The output includes the
+                        time taken for both the long and short conditions, as
+                        well as the difference in processing time between the
+                        two.
+                    </p>
+                    <table class="results-table">
+                        <thead>
+                            <td>Number of Iterations</td>
+                            <td>3 Operator Conditional (sec)</td>
+                            <td>2 Operator Conditional (sec)</td>
+                            <td>Time Delta (sec)</td>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1000</td>
+                                <td>0.001003</td>
+                                <td>0.000985</td>
+                                <td>0.000018</td>
+                            </tr>
+                            <tr>
+                                <td>1000000</td>
+                                <td>0.250852</td>
+                                <td>0.232852</td>
+                                <td>0.018</td>
+                            </tr>
+                            <tr>
+                                <td>1000000000</td>
+                                <td>222.685095</td>
+                                <td>222.001522</td>
+                                <td>0.683573</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <h4>Conclusion</h4>
+                    <p>
+                        In the conducted experiments with varying numbers of
+                        iterations, the results consistently show that the short
+                        condition, utilizing the and operator, tends to have a
+                        slightly faster execution time compared to the long
+                        condition with or operators. The difference in
+                        processing time increases marginally with a higher
+                        number of iterations, suggesting that the structure of
+                        conditional statements may have a subtle impact on
+                        performance, becoming more noticeable with larger
+                        datasets.
+                    </p>
+                    <p>
+                        If you are a developer looking to get a slight margin of
+                        performance improvement on your next project, using
+                        Discrete Mathematics to optimize your code could make a
+                        world of difference.
+                    </p>
+                </div>
+            </main>
+
+            <footer class="mastfoot mt-auto">
+                <div class="inner">
+                    <p>Professional Software Engineer</p>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>
