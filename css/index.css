@@ -135,3 +135,26 @@ body {
 .mastfoot p {
   margin-top: 3em;
 }
+
+.code-box {
+  /* color: white; */
+  border-radius: 1rem !important;
+  padding: 1rem;
+  border: 2px solid white;
+}
+
+.results-table {
+  border: 2px solid white;
+  border-radius: 1rem !important;
+  margin: 1rem;
+}
+
+.results-table thead {
+  border-bottom: 1px solid white;
+  padding: 5px;
+}
+
+.results-table td {
+  padding: 8px;
+  border: 1px solid gray;
+}
