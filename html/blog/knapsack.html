@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+        <meta name="description" content="Portfolio" />
+        <meta name="author" content="KingMcD" />
+
+        <title>Samuel McDowell</title>
+
+        <!-- Icon -->
+        <link
+            rel="icon"
+            href="../../img/logo.ico"
+            type="image/png"
+            sizes="16x16"
+        />
+
+        <!-- Bootstrap core CSS -->
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+            crossorigin="anonymous"
+        />
+
+        <!-- Google Fonts -->
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css?family=Permanent+Marker"
+        />
+
+        <!-- Prism -->
+        <link rel="stylesheet" href="../../css/prism/prism.css" />
+        <script src="../../css/prism/prism.js"></script>
+
+        <!-- Custom styles for this template -->
+        <link href="../../css/index.css" rel="stylesheet" />
+        <link href="../../css/projects.css" rel="stylesheet" />
+    </head>
+
+    <body class="text-center">
+        <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+            <header class="masthead">
+                <div class="inner">
+                    <h3 class="masthead-brand name">Samuel McDowell</h3>
+                    <nav class="nav nav-masthead justify-content-center">
+                        <a class="nav-link" href="../../index.html">Home</a>
+                        <a class="nav-link" href="../../html/projects.html"
+                            >Projects</a
+                        >
+                        <a class="nav-link active" href="../../html/blog.html"
+                            >Blog</a
+                        >
+                        <a class="nav-link" href="../../html/resume.html"
+                            >Resume</a
+                        >
+                        <a class="nav-link" href="../../html/contact.html"
+                            >Contact</a
+                        >
+                    </nav>
+                </div>
+            </header>
+
+            <main role="main" class="inner cover">
+                <h1 class="cover-heading name">
+                    Essential Algorithms: The Knapsack Problem
+                </h1>
+                <hr />
+
+                <div class="text-left">
+                    <h4>Introduction</h4>
+                    <p>
+                        In the field of computer science, it is very common to
+                        have to find an optimal solution while considering two
+                        or more factors. The Knapsack Problem is a
+                        classic optimization problem that arises in various
+                        fields such as computer science, operations research,
+                        and finance. It involves selecting a subset of items
+                        with specific weights and values to maximize the total
+                        value while staying within a given weight capacity. In
+                        this comprehensive guide, we'll explore different
+                        approaches to solving the Knapsack Problem in Python.
+                    </p>
+                    <h4>Problem Statement</h4>
+                    <p>
+                        Before diving into the solution, let's understand the
+                        problem statement. Given a set of items, each with a
+                        weight and a value, the task is to determine the maximum
+                        value that can be obtained by selecting a subset of
+                        items without exceeding a given weight capacity.
+                    </p>
+                    <h4>Solution</h4>
+                    <p>
+                        One of the most efficient ways to solve the Knapsack
+                        Problem is by using dynamic programming. The dynamic
+                        programming approach involves breaking down the problem
+                        into subproblems and solving them in a bottom-up manner.
+                    </p>
+                    <p>
+                        To break down this problem we are going to create a 2D
+                        Table to store our intermediate results. Each row in the
+                        table represents a specific item and each column
+                        represent a partial capacity of the knapsack. For each
+                        location on the table, a choice is made about whether
+                        the item in that row can be included to create a better
+                        solution. The value at table location (x, y) represents
+                        the best sum of items 1 through x that is still less
+                        than weight y.
+                    </p>
+                    <p>Here's a step-by-step guide to this approach:</p>
+                    <ul>
+                        <li>
+                            Define the Problem:
+                            <ul>
+                                <li>
+                                    Define the function to solve the Knapsack
+                                    Problem, taking the items, weights, values,
+                                    and capacity as inputs.
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            Create a 2D Table:
+                            <ul>
+                                <li>
+                                    Initialize a 2D array to store the
+                                    intermediate results. The rows represent the
+                                    items and the columns represent a partially
+                                    filled capacity of the knapsack.
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            Base Case:
+                            <ul>
+                                <li>
+                                    Set the base case values. For the item at
+                                    (0,0) there is no space in the back and no
+                                    items can be used.
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            Fill the Table:
+                            <ul>
+                                <li>
+                                    Iterate through each item and remaining
+                                    capacity, filling the table based on whether
+                                    the item should be included or excluded.
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            Backtrack to Find Solution:
+                            <ul>
+                                <li>
+                                    Once the item is filled, backtrack through
+                                    it to find out which items were used to
+                                    contribute to the maximum value.
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <h4>The Code</h4>
+                    <pre class="code-box">
+                        <code class="language-python">
+#python3
+"""
+Python knapsack implementation
+"""
+
+def knapsack(items, weights, values, capacity):
+    n = len(items)
+    table = [[0 for _ in range(capacity + 1)] for _ in range(n + 1)]
+
+    for i in range(1, n + 1):
+        for w in range(capacity + 1):
+            if weights[i - 1] <= w:
+                table[i][w] = max(values[i - 1] + table[i - 1][w - weights[i - 1]], table[i - 1][w])
+            else:
+                table[i][w] = table[i - 1][w]
+
+    selected_items = []
+    i, w = n, capacity
+    while i > 0 and w > 0:
+        if table[i][w] != table[i - 1][w]:
+            selected_items.append(items[i - 1])
+            w -= weights[i - 1]
+        i -= 1
+
+    return table[n][capacity], selected_items
+
+# Example Usage:
+items = ['Item1', 'Item2', 'Item3', 'Item4', 'Item5']
+weights = [2, 3, 4, 5, 9]
+values = [3, 4, 8, 8, 10]
+capacity = 20
+
+max_value, selected_items = knapsack(items, weights, values, capacity)
+print(f"Maximum value: {max_value}")
+print(f"Selected items: {selected_items}")
+                        </code>
+                    </pre>
+
+                    <h4>Conclusion</h4>
+                    <p>
+                        Solving the Knapsack Problem efficiently is crucial in
+                        various applications, and the dynamic programming
+                        approach provides an elegant solution. By breaking down
+                        the problem into smaller subproblems and leveraging a
+                        bottom-up approach, we can find the optimal subset of
+                        items to maximize value within a given weight capacity.
+                        The provided Python implementation serves as a powerful
+                        tool for solving real-world optimization challenges.
+                    </p>
+                </div>
+            </main>
+
+            <footer class="mastfoot mt-auto">
+                <div class="inner">
+                    <p>Professional Software Engineer</p>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>
