@@ -13,3 +13,10 @@
 .card-img-top {
     aspect-ratio: 1;
 }
+
+.card a {
+    background-image: linear-gradient(90deg, rgba(0,31,84,1) 0%, rgba(18,130,162,1) 100%);;
+  color: var(--white);
+  border: 2px solid var(--white);
+  border-radius: 50px;
+}
