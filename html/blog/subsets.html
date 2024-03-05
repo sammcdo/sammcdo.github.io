@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+        <meta name="description" content="Portfolio" />
+        <meta name="author" content="KingMcD" />
+
+        <title>Samuel McDowell</title>
+
+        <!-- Icon -->
+        <link
+            rel="icon"
+            href="../../img/logo.ico"
+            type="image/png"
+            sizes="16x16"
+        />
+
+        <!-- Bootstrap core CSS -->
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+            crossorigin="anonymous"
+        />
+
+        <!-- Google Fonts -->
+        <link
+            rel="stylesheet"
+            href="../../css/satoshi.css"
+        />
+
+        <!-- Prism -->
+        <link rel="stylesheet" href="../../css/prism/prism.css" />
+        <script src="../../css/prism/prism.js"></script>
+
+        <!-- Custom styles for this template -->
+        <link href="../../css/index.css" rel="stylesheet" />
+        <link href="../../css/projects.css" rel="stylesheet" />
+        <link href="../../css/blogpost.css" rel="stylesheet" />
+        <link href="../../css/subsets.css" rel="stylesheet" />
+    </head>
+
+    <body class="text-center">
+        <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+            <header class="masthead">
+                <div class="inner">
+                    <h3 class="masthead-brand name">Samuel McDowell</h3>
+                    <nav class="nav nav-masthead justify-content-center">
+                        <a class="nav-link" href="../../index.html">Home</a>
+                        <a class="nav-link" href="../../html/projects.html"
+                            >Projects</a
+                        >
+                        <a class="nav-link active" href="../../html/blog.html"
+                            >Blog</a
+                        >
+                        <a class="nav-link" href="../../html/resume.html"
+                            >Resume</a
+                        >
+                        <a class="nav-link" href="../../html/contact.html"
+                            >Contact</a
+                        >
+                    </nav>
+                </div>
+            </header>
+
+            <main role="main" class="inner cover">
+                <h1 class="cover-heading name">
+                    Essential Algorithms: Finding Subsets
+                </h1>
+                <hr />
+
+                <div class="text-left">
+                    <h4>Introduction</h4>
+                    <p>
+                        When delving into the world of programming, certain problems are foundational to build up to complex problems.
+                        The Subset problem is one such challenge. In this post we will dive into the intricacies of the Subset
+                        problem and tackle it in C++.
+                    </p>
+                    <h4>Problem Statement</h4>
+                    <p>
+                        Before diving into the solution, let's understand the
+                        problem statement. Given a set of integers <code>X</code> find all subsets of <code>X</code>.
+                    </p>
+                    <h4>Solution</h4>
+                    <p>
+                        The best way to think about this problem is in terms of bits. I'm going give you most of the solution up front so we 
+                        can explain it throughout this article.
+                    </p>
+                    <blockquote style="text-align: center;">
+                        All possible subsets of a set with <code>N</code> items exist as the binary representation of 
+                        the numbers of 0 up to <code>2<sup>N</sup></code>
+                    </blockquote>
+                    <p>
+                        Ok let me explain this statement. Lets say we have a set <code>X = {A, B, C, D}</code>. We want to find all possible subsets of <code>X</code>.
+                        Using our thesis, lets find all the subsets. First we will look at all the numbers from <code>0</code> to <code>2<sup>N</sup></code> in binary.
+                    </p>
+                    <table id="binary">
+                        <thead>
+                            <tr>
+                                <th>Integer</th>
+                                <th>Binary</th>
+                                <th class="divider"></th>
+                                <th>Integer</th>
+                                <th>Integer</th>
+                                <th class="divider"></th>
+                                <th>Integer</th>
+                                <th>Integer</th>
+                                <th class="divider"></th>
+                                <th>Integer</th>
+                                <th>Integer</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>0</td>
+                                <td>0000</td>
+                                <td class="divider"></td>
+                                <td>4</td>
+                                <td>0100</td>
+                                <td class="divider"></td>
+                                <td>8</td>
+                                <td>1000</td>
+                                <td class="divider"></td>
+                                <td>12</td>
+                                <td>1100</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>0001</td>
+                                <td class="divider"></td>
+                                <td>5</td>
+                                <td>0101</td>
+                                <td class="divider"></td>
+                                <td>9</td>
+                                <td>1001</td>
+                                <td class="divider"></td>
+                                <td>13</td>
+                                <td>1101</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>0010</td>
+                                <td class="divider"></td>
+                                <td>6</td>
+                                <td>0110</td>
+                                <td class="divider"></td>
+                                <td>10</td>
+                                <td>1010</td>
+                                <td class="divider"></td>
+                                <td>14</td>
+                                <td>1110</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>0011</td>
+                                <td class="divider"></td>
+                                <td>7</td>
+                                <td>0111</td>
+                                <td class="divider"></td>
+                                <td>11</td>
+                                <td>1011</td>
+                                <td class="divider"></td>
+                                <td>15</td>
+                                <td>1111</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>
+                        Thats a lot of numbers but how can we use this? Well look at the positions of the <code>1</code> bits in the binary numbers.
+                        If each number is a subset, a 1 in the binary number means you should include that item in the subset. For example, in 
+                        <code>0000</code> there are no <code>1</code> bits so it represents the empty set. However in <code>0110</code> (aka 6), 
+                        there are 2 <code>1</code> bits, and that would represent the subset <code>{B, C}</code>.
+                    </p>
+                    <p>
+                        To solve the subset sum problem, we need to get the position of the <code>1</code> bits in each number and check if that 
+                        subset sums to the target. Lets code that in C++.
+                    </p>
+                    <h4>The Code</h4>
+                    <pre class="code-box">
+                        <code class="language-cpp">
+#include <iostream>
+#include <vector>
+
+void printAllSubsets(const std::vector<int>& set) {
+    int n = set.size();
+
+    // Total number of subsets is 2^n
+    int totalSubsets = 1 << n;
+
+    std::cout << "All subsets of the given set:\n";
+    for (int subset = 0; subset < totalSubsets; ++subset) {
+        std::cout << "{ ";
+
+        for (int i = 0; i < n; ++i) {
+            // Check if the i-th bit is set in the subset bitmask
+            if (subset & (1 << i)) {
+                std::cout << set[i] << " ";
+            }
+        }
+
+        std::cout << "}\n";
+    }
+}
+
+int main() {
+    std::vector<int> set = {1, 2, 3};
+
+    printAllSubsets(set);
+
+    return 0;
+}                 
+</code>
+                    </pre>
+
+                    <h4>Conclusion</h4>
+                    <p>
+                        This is a very helpful introduction to bitwise algorithms. Generating all 
+                        subsets can be a very useful as a building block for solving more complex problems.
+                        I have used this idea for multiple competitive programming problems. 
+                        I hope it benefits you on your coding journey as well.
+                    </p>
+                </div>
+            </main>
+
+            <footer class="mastfoot mt-auto">
+                <div class="inner">
+                    <p>Software Engineer</p>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>

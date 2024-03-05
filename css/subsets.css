@@ -1,0 +1,18 @@
+#binary td {
+    padding: 5px;
+}
+
+#binary th {
+    padding: 5px;
+}
+
+#binary {
+    border-radius: 2rem !important;
+    border: 1px solid white;
+    padding: 5px;
+}
+
+.divider {
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+}
