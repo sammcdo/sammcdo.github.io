@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+        <meta name="description" content="Portfolio" />
+        <meta name="author" content="KingMcD" />
+
+        <title>Samuel McDowell</title>
+
+        <!-- Icon -->
+        <link
+            rel="icon"
+            href="../../img/logo.ico"
+            type="image/png"
+            sizes="16x16"
+        />
+
+        <!-- Bootstrap core CSS -->
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+            crossorigin="anonymous"
+        />
+
+        <!-- Google Fonts -->
+        <link
+            rel="stylesheet"
+            href="../../css/satoshi.css"
+        />
+
+        <!-- Prism -->
+        <link rel="stylesheet" href="../../css/prism/prism.css" />
+        <script src="../../css/prism/prism.js"></script>
+
+        <!-- Custom styles for this template -->
+        <link href="../../css/index.css" rel="stylesheet" />
+        <link href="../../css/projects.css" rel="stylesheet" />
+        <link href="../../css/blogpost.css" rel="stylesheet" />
+    </head>
+
+    <body class="text-center">
+        <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+            <header class="masthead">
+                <div class="inner">
+                    <h3 class="masthead-brand name">Samuel McDowell</h3>
+                    <nav class="nav nav-masthead justify-content-center">
+                        <a class="nav-link" href="../../index.html">Home</a>
+                        <a class="nav-link" href="../../html/projects.html"
+                            >Projects</a
+                        >
+                        <a class="nav-link active" href="../../html/blog.html"
+                            >Blog</a
+                        >
+                        <a class="nav-link" href="../../html/resume.html"
+                            >Resume</a
+                        >
+                        <a class="nav-link" href="../../html/contact.html"
+                            >Contact</a
+                        >
+                    </nav>
+                </div>
+            </header>
+
+            <main role="main" class="inner cover">
+                <h1 class="cover-heading name">
+                    Competitive Programming: Sets
+                </h1>
+                <hr />
+
+                <div class="text-left">
+                    <h4>Introduction</h4>
+                    <p>
+                        In this post, we'll dive into one of the foundational 
+                        concepts in computer science: sets. If you've ever dealt 
+                        with collections of data, whether in Python, C++, or another 
+                        language, sets offer powerful tools to manage and manipulate 
+                        these collections efficiently.
+                    </p>
+                    <h4>What are Sets?</h4>
+                    <p>
+                        At their core, sets are simply <b>collections of distinct, 
+                        well-defined objects</b>. Unlike a list or an array, a set 
+                        ensures that every element is unique—duplicates are automatically 
+                        excluded. This makes sets ideal for scenarios where you want to 
+                        remove duplicate entries or check for membership efficiently. In 
+                        programming terms, think of a set as a <b>list where each item is unique.</b>
+                    </p>
+                    <h4>Set Operations</h4>
+                    <p>
+                        Sets support a variety of operations, many of which you 
+                        may already be familiar with from mathematics. The most 
+                        common set operations you'll use when programming are:
+                    </p>
+                    <ul>
+                        <li><b>Union:</b> Combines two sets, including all unique elements.</li>
+                        <li><b>Intersection:</b> Returns only the elements that are common between two sets.</li>
+                        <li><b>Difference:</b> Yields the elements that are present in one set but not the other.</li>
+                        <li><b>Symmetric Difference:</b> Returns elements that are in either of the two sets, but not in both.</li>
+                        <li><b>Membership:</b> Checks whether a specific element exists in a set.</li>
+                    </ul>
+                    <p>These operations allow for powerful and efficient data manipulation, 
+                        particularly when dealing with large datasets or tasks that require fast lookups.
+                    </p>
+                    <h4>Sets in Python</h4>
+                    <p>
+                        Python has a built-in <code>set</code> type that makes it easy to 
+                        create and work with sets. Here are a few examples of common operations 
+                        and their time complexities:
+                    </p>
+                    <ul>
+                        <li><b>Add:</b> O(1)</li>
+                        <li><b>Union:</b> O(n)</li>
+                        <li><b>Difference:</b> O(n)</li>
+                        <li><b>Intersection:</b> O(n)</li>
+                        <li><b>Symmetric Difference:</b> O(n)</li>
+                        <li><b>Membership:</b> O(1)</li>
+                    </ul>
+                    <p><b>Example:</b></p>
+                    <pre class="code-box">
+<code class="language-python"># Creating sets
+set_a = {1, 2, 3}
+set_b = {3, 4, 5}
+
+# Union
+union_set = set_a | set_b
+union_set = set_a.union(set_b)
+# {1, 2, 3, 4, 5}
+
+# Intersection
+intersection_set = set_a & set_b
+intersection_set = set_a.intersection(set_b)
+# {3}
+
+# Difference
+difference_set = set_a - set_b
+difference_set = set_a.difference(set_b)
+# {1, 2}
+
+# Symmetric Difference
+symmetric_diff_set = set_a ^ set_b
+symmetric_diff_set = set_a.symmetric_difference(set_b) 
+# {1, 2, 4, 5}</code></pre>
+
+                    <h4>Sets in C++</h4>
+                    <p>
+                        In C++, the <code>std::unordered_set</code> class provides a way 
+                        to implement sets. The operations are similar to Python, 
+                        but the syntax varies slightly. Sets in C++ also offer 
+                        efficient performance, especially for operations such as 
+                        adding, removing, or checking membership, which typically 
+                        run in O(1) time.
+                    </p>
+                    <p><b>Example:</b></p>
+                    <pre class="code-box">
+<code class="language-cpp">#include &ltiostream&gt
+#include &ltunordered_set&gt
+
+int main() {
+    std::unordered_set<int> set_a = {1, 2, 3};
+    std::unordered_set<int> set_b = {3, 4, 5};
+    
+    // Add
+    set_a.insert(7);
+
+    // Union
+    std::unordered_set<int> union_set = set_a;
+    union_set.insert(set_b.begin(), set_b.end());
+
+    // Intersection
+    std::unordered_set<int> intersection_set;
+    for (auto& elem : set_a) {
+        if (set_b.find(elem) != set_b.end()) {
+            intersection_set.insert(elem);
+        }
+    }
+
+    // Output the union and intersection
+    std::cout << "Union: ";
+    for (const auto& elem : union_set) std::cout << elem << " ";  // Union: 1 2 3 4 5
+    std::cout << "\nIntersection: ";
+    for (const auto& elem : intersection_set) std::cout << elem << " ";  // Intersection: 3
+}</code></pre>
+                <h4>Problem Solving with Sets</h4>
+                <p>
+                    If you're interested in testing your knowledge, 
+                    there are some fantastic programming challenges involving sets:
+                </p>
+                <ul>
+                    <li>
+                        <b>Keyboardd:</b> A problem where you can use set operations 
+                        to solve for specific constraints related to unique keyboard 
+                        inputs. <a href="https://open.kattis.com/problems/keyboardd">Link to the problem</a>.
+                    </li>
+                    <li>
+                        <b>Everywhere:</b> Another problem where the concept of sets 
+                        helps in identifying unique entries. 
+                        <a href="https://open.kattis.com/problems/everywhere">Link to the problem</a>.
+                    </li>
+                    <li>
+                        <b>NoDup:</b> A great challenge where you remove duplicates from a 
+                        list, using the power of sets. 
+                        <a href="https://open.kattis.com/problems/nodup">Link to the problem</a>.
+                    </li>
+                </ul>
+                <h4>Conclusion</h4>
+                <p>
+                    Sets are a crucial part of any programmer's toolkit. Whether 
+                    you're working in Python, C++, or any other language, the 
+                    ability to efficiently manage and manipulate collections 
+                    of unique data is invaluable. Be sure to explore more set-related 
+                    problems and apply these concepts in your projects!
+                </p>
+                </div>
+            </main>
+
+            <footer class="mastfoot mt-auto">
+                <div class="inner">
+                    <p>Software Engineer</p>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>
