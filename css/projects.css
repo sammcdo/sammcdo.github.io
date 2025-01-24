@@ -1,5 +1,6 @@
 .card {
     background-color: #555555;
+    border-radius: 0.75rem !important;
 }
 
 .card-title {
