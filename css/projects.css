@@ -1,6 +1,15 @@
+#projectCarousel {
+      max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .card {
     background-color: #555555;
     border-radius: 0.75rem !important;
+      max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .card-title {
@@ -21,3 +30,9 @@
   border: 2px solid var(--white);
   border-radius: 50px;
 }
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: drop-shadow(0 0 4px black) drop-shadow(0 0 2px black);
+}
+

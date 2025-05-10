@@ -1,269 +1,603 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1, shrink-to-fit=no"
-        />
-        <meta name="description" content="Portfolio" />
-        <meta name="author" content="KingMcD" />
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="Portfolio" />
+    <meta name="author" content="KingMcD" />
 
-        <title>Samuel McDowell</title>
+    <title>Samuel McDowell</title>
 
-        <!-- Icon -->
-        <link
-            rel="icon"
-            href="../img/logo.ico"
-            type="image/png"
-            sizes="16x16"
-        />
+    <!-- Icon -->
+    <link rel="icon" href="../img/logo.ico" type="image/png" sizes="16x16" />
 
-        <!-- Bootstrap core CSS -->
-        <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
-            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-            crossorigin="anonymous"
-        />
+    <!-- Bootstrap core CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
 
-        <!-- Google Fonts -->
-        <link
-            rel="stylesheet"
-            href="../css/satoshi.css"
-        />
-        
-        <!-- Custom styles for this template -->
-        <link href="../css/index.css" rel="stylesheet" />
-        <link href="../css/projects.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="../css/satoshi.css" />
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-        <script src="../js/index.js" defer></script>
-    </head>
+    <!-- Custom styles for this template -->
+    <link href="../css/index.css" rel="stylesheet" />
+    <link href="../css/projects.css" rel="stylesheet" />
 
-    <body class="text-center">
-        <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-            <header class="masthead">
-                <div class="inner">
-                    <h3 class="masthead-brand name">Samuel McDowell</h3>
-                    <nav class="nav nav-masthead justify-content-center">
-                        <a class="nav-link" href="../index.html">Home</a>
-                        <a class="nav-link active" href="#">Projects</a>
-                        <a class="nav-link" href="../html/blog.html"
-                            >Blog</a
-                        >
-                        <a class="nav-link" href="../html/resume.html"
-                            >Resume</a
-                        >
-                        <a class="nav-link" href="../html/contact.html"
-                            >Contact</a
-                        >
-                    </nav>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="../js/index.js" defer></script>
+  </head>
+
+  <body class="text-center">
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+      <header class="masthead">
+        <div class="inner">
+          <h3 class="masthead-brand name">Samuel McDowell</h3>
+          <nav class="nav nav-masthead justify-content-center">
+            <a class="nav-link" href="../index.html">Home</a>
+            <a class="nav-link active" href="#">Projects</a>
+            <a class="nav-link" href="../html/blog.html">Blog</a>
+            <a class="nav-link" href="../html/resume.html">Resume</a>
+            <a class="nav-link" href="../html/contact.html">Contact</a>
+          </nav>
+        </div>
+      </header>
+
+      <main role="main" class="inner cover">
+        <h1 class="cover-heading name">Projects</h1>
+        <hr />
+        <div class="d-flex justify-content-center mb-3">
+          <button id="toggleViewBtn" class="btn btn-outline-primary">
+            Switch to Table View
+          </button>
+        </div>
+
+        <!-- CAROUSEL VIEW (default) -->
+        <div id="carouselView">
+          <div id="projectCarousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+
+              <div class="carousel-item active">
+                <div class="card m-2 p-3">
+                  <img
+                    class="card-img-top"
+                    src="../img/stylo.png"
+                    alt="Stylo Demo"
+                  />
+                  <div class="card-body">
+                    <h4 class="card-title">Stylo-Compare</h4>
+                    <h6 class="card-subtitle mb-2 text-muted">
+                      Stylometric Text Comparison Tool
+                    </h6>
+                    <p class="card-text">
+                      A formal writeup of my work creating a Stylometric analysis text comparison tool.
+                    </p>
+                    <div class="mb-2"><a
+                      href="https://github.com/sammcdo/Stylo-Compare"
+                      target="_blank"
+                      class="btn btn-primary"
+                      >View on Github</a
+                    ></div>
+                    <div><a
+                      href="https://kingmcd.shinyapps.io/stylocompare/"
+                      target="_blank"
+                      class="btn btn-primary"
+                      >View Live Tool</a
+                    ></div>
+                  </div>
                 </div>
-            </header>
+              </div>
 
-            <main role="main" class="inner cover">
-                <h1 class="cover-heading name">Projects</h1>
-                <hr />
-                <div class="container">
-                    <div class="row">
-                        <div class="card m-1 p-3 col-sm">
-                            <img
-                                class="card-img-top card-img-bottom"
-                                src="../img/vectorautoreg.png"
-                                alt="Card image cap"
-                            />
-                            <div class="card-body">
-                                <h4 class="card-title">IPO Predictor</h4>
-                                <h6 class="card-subtitle mb-2 text-muted">
-                                    Vector Autoregressive IPO Price Prediction
-                                </h6>
-                                <p class="card-text">
-                                    This is a formal writeup of my work predicting stock prices of related IPOs with Vector Autoregression.
-                                </p>
-                                <a target="_blank" href="https://sammcdo.github.io/IPO-Predictor/index.html" class="btn btn-primary"
-                                    >View Writeup</a
-                                >
-                                <p></p>
-                                <a target="_blank" href="https://github.com/sammcdo/IPO-Predictor" class="btn btn-primary"
-                                    >View on Github</a
-                                >
-                            </div>
-                        </div>
-                        <div class="card m-1 p-3 col-sm">
-                            <img
-                                class="card-img-top card-img-bottom"
-                                src="../img/kattis.png"
-                                alt="Card image cap"
-                            />
-                            <div class="card-body">
-                                <h4 class="card-title">Kattis Problems</h4>
-                                <h6 class="card-subtitle mb-2 text-muted">
-                                    My Solutions for Competitive Programming
-                                </h6>
-                                <p class="card-text">
-                                    These solutions are written in Python and C++. They show how to solve competitive programming problems in all difficulties.
-                                </p>
-                                <a target="_blank" href="https://github.com/sammcdo/Kattis-Problems" class="btn btn-primary"
-                                    >View on Github</a
-                                >
-                            </div>
-                        </div>
-                        <div class="card m-1 p-3 col-sm">
-                            <img
-                                class="card-img-top card-img-bottom"
-                                src="../img/dt.png"
-                                alt="Jane Austen Image"
-                            />
-                            <div class="card-body">
-                                <h4 class="card-title">Decision Tree</h4>
-                                <h6 class="card-subtitle mb-2 text-muted">
-                                    Custom Decision Tree Implementation in Python
-                                </h6>
-                                <p class="card-text">
-                                    To demonstrate my understanding of decision trees, I implemented one from scratch in Python.
-                                </p>
-                                <a target="_blank" href="https://sammcdo.github.io/Machine-Learning-Trees/DecisionTreesTests.html" class="btn btn-primary"
-                                    >View Example</a
-                                >
-                                <p></p>
-                                <a target="_blank" href="https://github.com/sammcdo/Machine-Learning-Trees" class="btn btn-primary"
-                                    >View on Github</a
-                                >
-                            </div>
-                        </div>
+              <div class="carousel-item">
+                <div class="card m-2 p-3">
+                  <img
+                    class="card-img-top"
+                    src="../img/vectorautoreg.png"
+                    alt="IPO Predictor"
+                  />
+                  <div class="card-body">
+                    <h4 class="card-title">IPO Predictor</h4>
+                    <h6 class="card-subtitle mb-2 text-muted">
+                      Vector Autoregressive IPO Price Prediction
+                    </h6>
+                    <p class="card-text">
+                      This is a formal writeup of my work predicting stock
+                      prices of related IPOs with Vector Autoregression.
+                    </p>
+                    <div class="mb-2">
+                      <a
+                        href="https://sammcdo.github.io/IPO-Predictor/index.html"
+                        target="_blank"
+                        class="btn btn-primary"
+                        >View Writeup</a
+                      >
                     </div>
-                    <div class="row">
-                        <div class="card m-1 p-3 col-sm">
-                            <img
-                                class="card-img-top card-img-bottom"
-                                src="../img/robot2022.jpeg"
-                                alt="Card image cap"
-                            />
-                            <div class="card-body">
-                                <h4 class="card-title">FRC NOMAD 2022</h4>
-                                <h6 class="card-subtitle mb-2 text-muted">
-                                    Robot Code
-                                </h6>
-                                <p class="card-text">
-                                    This robot picked up mini dodgeballs and shot them into a target using computer vision.
-                                </p>
-                                <a target="_blank" href="https://github.com/frc6995/Robot-2022" class="btn btn-primary"
-                                    >View on Github</a
-                                >
-                            </div>
-                        </div>
-                        <div class="card m-1 p-3 col-sm">
-                            <img
-                                class="card-img-top card-img-bottom"
-                                src="../img/austen.jpg"
-                                alt="Jane Austen Image"
-                            />
-                            <div class="card-body">
-                                <h4 class="card-title">Jane Austen AI</h4>
-                                <h6 class="card-subtitle mb-2 text-muted">
-                                    Neural Network Project
-                                </h6>
-                                <p class="card-text">
-                                    Check out this machine learning project that uses LSTMs to generate novels that sound like Jane Austen.
-                                </p>
-                                <a target="_blank" href="https://github.com/sammcdo/TextGeneratorAI" class="btn btn-primary"
-                                    >View on Github</a
-                                >
-                            </div>
-                        </div>
-                        <div class="card m-1 p-3 col-sm">
-                            <img
-                                class="card-img-top card-img-bottom"
-                                src="https://github.com/sammcdo/ImageClassificationLive/blob/main/demo.png?raw=true"
-                                alt="Card image cap"
-                            />
-                            <div class="card-body">
-                                <h4 class="card-title">Live Image Detection</h4>
-                                <h6 class="card-subtitle mb-2 text-muted">
-                                    Image Classification Done in a Web Browser
-                                </h6>
-                                <p class="card-text">
-                                    A simple image classifier that can run live in a browser using prebuilt models.
-                                </p>
-                                <a target="_blank" href="https://sammcdo.github.io/ImageClassificationLive/" class="btn btn-primary"
-                                    >View Live Demo</a
-                                >
-                                <p></p>
-                                <a target="_blank" href="https://github.com/sammcdo/ImageClassificationLive" class="btn btn-primary"
-                                    >View on Github</a
-                                >
-                            </div>
-                        </div>
+                    <div>
+                      <a
+                        href="https://github.com/sammcdo/IPO-Predictor"
+                        target="_blank"
+                        class="btn btn-primary"
+                        >View on Github</a
+                      >
                     </div>
-                    <!-- <div class="row">
-                        <div class="card m-1 p-3 col-sm">
-                            <img
-                                class="card-img-top card-img-bottom"
-                                src="../img/mtntraintours.png"
-                                alt="Card image cap"
-                            />
-                            <div class="card-body">
-                                <h4 class="card-title">Mountain Train Tours</h4>
-                                <h6 class="card-subtitle mb-2 text-muted">
-                                    Demo Website Created with Jquery
-                                </h6>
-                                <p class="card-text">
-                                    This website was created for practice using Jquery.
-                                </p>
-                                <a target="_blank" href="https://sammcdo.github.io/CSCN-315-FrontEnd/project01/" class="btn btn-primary"
-                                    >View Live Demo</a
-                                >
-                                <p></p>
-                                <a target="_blank" href="https://github.com/sammcdo/CSCN-315-FrontEnd/tree/main/project01" class="btn btn-primary"
-                                    >View on Github</a
-                                >
-                            </div>
-                        </div>
-                        <div class="card m-1 p-3 col-sm">
-                            <img
-                                class="card-img-top card-img-bottom"
-                                src="https://github.com/sammcdo/CSCN112-AdvCpp/blob/main/FinalProject_EquipmentStorageSystem/demo.png?raw=true"
-                                alt="Card image cap"
-                            />
-                            <div class="card-body">
-                                <h4 class="card-title">Inventory Management</h4>
-                                <h6 class="card-subtitle mb-2 text-muted">
-                                    A Terminal Based inventory system built with C++
-                                </h6>
-                                <p class="card-text">
-                                    This project demonstates proficiency with C++ including inheritance, polymorphism, dynamic memory management, and operator overloading.
-                                </p>
-                                <a target="_blank" href="https://github.com/sammcdo/CSCN112-AdvCpp/tree/main/FinalProject_EquipmentStorageSystem" class="btn btn-primary"
-                                    >View on Github</a
-                                >
-                            </div>
-                        </div>
-                        <div class="card m-1 p-3 col-sm">
-                            <img
-                                class="card-img-top card-img-bottom "
-                                src="../img/nomadalliance.png"
-                                alt="Card image cap"
-                            />
-                            <div class="card-body">
-                                <h4 class="card-title">The Nomad Alliance</h4>
-                                <h6 class="card-subtitle mb-2 text-muted">
-                                    Robotics Resource and Stats Tool
-                                </h6>
-                                <p class="card-text">
-                                    This website offers our team resources for public use and provides statistics on teams.
-                                </p>
-                                <a target="_blank" href="https://sammcdo.github.io/NomadAllianceArchive" class="btn btn-primary"
-                                    >View Live Demo</a
-                                >
-                                <p></p>
-                                <a target="_blank" href="https://github.com/sammcdo/WebEditor" class="btn btn-primary"
-                                    >View on Github</a
-                                >
-                            </div>
-                        </div>
-                    </div> -->
-                    <!--
+                  </div>
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <div class="card m-2 p-3">
+                  <img
+                    class="card-img-top"
+                    src="../img/kattis.png"
+                    alt="Kattis Problems"
+                  />
+                  <div class="card-body">
+                    <h4 class="card-title">Kattis Problems</h4>
+                    <h6 class="card-subtitle mb-2 text-muted">
+                      My Solutions for Competitive Programming
+                    </h6>
+                    <p class="card-text">
+                      These solutions are written in Python and C++. They show
+                      how to solve competitive programming problems in all
+                      difficulties.
+                    </p>
+                    <a
+                      href="https://github.com/sammcdo/Kattis-Problems"
+                      target="_blank"
+                      class="btn btn-primary"
+                      >View on Github</a
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <div class="card m-2 p-3">
+                  <img
+                    class="card-img-top"
+                    src="../img/dt.png"
+                    alt="Decision Tree"
+                  />
+                  <div class="card-body">
+                    <h4 class="card-title">Decision Tree</h4>
+                    <h6 class="card-subtitle mb-2 text-muted">
+                      Custom Decision Tree Implementation in Python
+                    </h6>
+                    <p class="card-text">
+                      To demonstrate my understanding of decision trees, I
+                      implemented one from scratch in Python.
+                    </p>
+                    <div class="mb-2"><a
+                      href="https://sammcdo.github.io/Machine-Learning-Trees/DecisionTreesTests.html"
+                      target="_blank"
+                      class="btn btn-primary"
+                      >View Example</a
+                    ></div>
+                    <div><a
+                      href="https://github.com/sammcdo/Machine-Learning-Trees"
+                      target="_blank"
+                      class="btn btn-primary"
+                      >View on Github</a
+                    ></div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="card m-1 p-3 col-sm">
+                  <img
+                    class="card-img-top card-img-bottom"
+                    src="../img/robot2022.jpeg"
+                    alt="Card image cap"
+                  />
+                  <div class="card-body">
+                    <h4 class="card-title">FRC NOMAD 2022</h4>
+                    <h6 class="card-subtitle mb-2 text-muted">Robot Code</h6>
+                    <p class="card-text">
+                      This robot picked up mini dodgeballs and shot them into a
+                      target using computer vision.
+                    </p>
+                    <a
+                      target="_blank"
+                      href="https://github.com/frc6995/Robot-2022"
+                      class="btn btn-primary"
+                      >View on Github</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="card m-1 p-3 col-sm">
+                  <img
+                    class="card-img-top card-img-bottom"
+                    src="../img/austen.jpg"
+                    alt="Jane Austen Image"
+                  />
+                  <div class="card-body">
+                    <h4 class="card-title">Jane Austen AI</h4>
+                    <h6 class="card-subtitle mb-2 text-muted">
+                      Neural Network Project
+                    </h6>
+                    <p class="card-text">
+                      Check out this machine learning project that uses LSTMs to
+                      generate novels that sound like Jane Austen.
+                    </p>
+                    <a
+                      target="_blank"
+                      href="https://github.com/sammcdo/TextGeneratorAI"
+                      class="btn btn-primary"
+                      >View on Github</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="card m-1 p-3 col-sm">
+                  <img
+                    class="card-img-top card-img-bottom"
+                    src="https://github.com/sammcdo/ImageClassificationLive/blob/main/demo.png?raw=true"
+                    alt="Card image cap"
+                  />
+                  <div class="card-body">
+                    <h4 class="card-title">Live Image Detection</h4>
+                    <h6 class="card-subtitle mb-2 text-muted">
+                      Image Classification Done in a Web Browser
+                    </h6>
+                    <p class="card-text">
+                      A simple image classifier that can run live in a browser
+                      using prebuilt models.
+                    </p>
+                    <div class="mb-2"><a
+                      target="_blank"
+                      href="https://sammcdo.github.io/ImageClassificationLive/"
+                      class="btn btn-primary"
+                      >View Live Demo</a
+                    ></div>
+                    <div><a
+                      target="_blank"
+                      href="https://github.com/sammcdo/ImageClassificationLive"
+                      class="btn btn-primary"
+                      >View on Github</a
+                    ></div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="card m-1 p-3 col-sm">
+                  <img
+                    class="card-img-top"
+                    src="https://github.com/sammcdo/WebEditor/blob/master/demo.png?raw=true"
+                    alt="Card image cap"
+                  />
+                  <div class="card-body">
+                    <h4 class="card-title">Web Editor</h4>
+                    <h6 class="card-subtitle mb-2 text-muted">
+                      Simple HTML Code Editor
+                    </h6>
+                    <p class="card-text">
+                      This IDE written in Python lets you write HTML with handy
+                      shortcuts built in.
+                    </p>
+                    <a
+                      target="_blank"
+                      href="https://github.com/sammcdo/WebEditor"
+                      class="btn btn-primary"
+                      >View on Github</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a
+              class="carousel-control-prev"
+              href="#projectCarousel"
+              role="button"
+              data-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+            </a>
+            <a
+              class="carousel-control-next"
+              href="#projectCarousel"
+              role="button"
+              data-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+            </a>
+          </div>
+        </div>
+
+        <!-- GRID VIEW -->
+        <div id="gridView" class="container d-none">
+          <div class="container">
+            <div class="row">
+                <div class="card m-1 p-3 col-sm">
+                  <img
+                    class="card-img-top"
+                    src="../img/stylo.png"
+                    alt="Stylo Demo"
+                  />
+                  <div class="card-body">
+                    <h4 class="card-title">Stylo-Compare</h4>
+                    <h6 class="card-subtitle mb-2 text-muted">
+                      Stylometric Text Comparison Tool
+                    </h6>
+                    <p class="card-text">
+                      A formal writeup of my work creating a Stylometric analysis text comparison tool.
+                    </p>
+                    <div class="mb-3"><a
+                      href="https://github.com/sammcdo/Stylo-Compare"
+                      target="_blank"
+                      class="btn btn-primary"
+                      >View on Github</a
+                    ></div>
+                    <div><a
+                      href="https://kingmcd.shinyapps.io/stylocompare/"
+                      target="_blank"
+                      class="btn btn-primary"
+                      >View Live Tool</a
+                    ></div>
+                  </div>
+                </div>
+
+              <div class="card m-1 p-3 col-sm">
+                <img
+                  class="card-img-top card-img-bottom"
+                  src="../img/vectorautoreg.png"
+                  alt="Card image cap"
+                />
+                <div class="card-body">
+                  <h4 class="card-title">IPO Predictor</h4>
+                  <h6 class="card-subtitle mb-2 text-muted">
+                    Vector Autoregressive IPO Price Prediction
+                  </h6>
+                  <p class="card-text">
+                    This is a formal writeup of my work predicting stock prices
+                    of related IPOs with Vector Autoregression.
+                  </p>
+                  <a
+                    target="_blank"
+                    href="https://sammcdo.github.io/IPO-Predictor/index.html"
+                    class="btn btn-primary"
+                    >View Writeup</a
+                  >
+                  <p></p>
+                  <a
+                    target="_blank"
+                    href="https://github.com/sammcdo/IPO-Predictor"
+                    class="btn btn-primary"
+                    >View on Github</a
+                  >
+                </div>
+              </div>
+              <div class="card m-1 p-3 col-sm">
+                <img
+                  class="card-img-top card-img-bottom"
+                  src="../img/kattis.png"
+                  alt="Card image cap"
+                />
+                <div class="card-body">
+                  <h4 class="card-title">Kattis Problems</h4>
+                  <h6 class="card-subtitle mb-2 text-muted">
+                    My Solutions for Competitive Programming
+                  </h6>
+                  <p class="card-text">
+                    These solutions are written in Python and C++. They show how
+                    to solve competitive programming problems in all
+                    difficulties.
+                  </p>
+                  <a
+                    target="_blank"
+                    href="https://github.com/sammcdo/Kattis-Problems"
+                    class="btn btn-primary"
+                    >View on Github</a
+                  >
+                </div>
+              </div>
+              
+            </div>
+            <div class="row">
+                <div class="card m-1 p-3 col-sm">
+                <img
+                  class="card-img-top card-img-bottom"
+                  src="../img/dt.png"
+                  alt="Jane Austen Image"
+                />
+                <div class="card-body">
+                  <h4 class="card-title">Decision Tree</h4>
+                  <h6 class="card-subtitle mb-2 text-muted">
+                    Custom Decision Tree Implementation in Python
+                  </h6>
+                  <p class="card-text">
+                    To demonstrate my understanding of decision trees, I
+                    implemented one from scratch in Python.
+                  </p>
+                  <a
+                    target="_blank"
+                    href="https://sammcdo.github.io/Machine-Learning-Trees/DecisionTreesTests.html"
+                    class="btn btn-primary"
+                    >View Example</a
+                  >
+                  <p></p>
+                  <a
+                    target="_blank"
+                    href="https://github.com/sammcdo/Machine-Learning-Trees"
+                    class="btn btn-primary"
+                    >View on Github</a
+                  >
+                </div>
+              </div>
+              <div class="card m-1 p-3 col-sm">
+                <img
+                  class="card-img-top card-img-bottom"
+                  src="../img/robot2022.jpeg"
+                  alt="Card image cap"
+                />
+                <div class="card-body">
+                  <h4 class="card-title">FRC NOMAD 2022</h4>
+                  <h6 class="card-subtitle mb-2 text-muted">Robot Code</h6>
+                  <p class="card-text">
+                    This robot picked up mini dodgeballs and shot them into a
+                    target using computer vision.
+                  </p>
+                  <a
+                    target="_blank"
+                    href="https://github.com/frc6995/Robot-2022"
+                    class="btn btn-primary"
+                    >View on Github</a
+                  >
+                </div>
+              </div>
+              <div class="card m-1 p-3 col-sm">
+                <img
+                  class="card-img-top card-img-bottom"
+                  src="../img/austen.jpg"
+                  alt="Jane Austen Image"
+                />
+                <div class="card-body">
+                  <h4 class="card-title">Jane Austen AI</h4>
+                  <h6 class="card-subtitle mb-2 text-muted">
+                    Neural Network Project
+                  </h6>
+                  <p class="card-text">
+                    Check out this machine learning project that uses LSTMs to
+                    generate novels that sound like Jane Austen.
+                  </p>
+                  <a
+                    target="_blank"
+                    href="https://github.com/sammcdo/TextGeneratorAI"
+                    class="btn btn-primary"
+                    >View on Github</a
+                  >
+                </div>
+              </div>
+              
+            </div>
+            <div class="row">
+              <!-- <div class="card m-1 p-3 col-sm">
+                <img
+                  class="card-img-top card-img-bottom"
+                  src="../img/mtntraintours.png"
+                  alt="Card image cap"
+                />
+                <div class="card-body">
+                  <h4 class="card-title">Mountain Train Tours</h4>
+                  <h6 class="card-subtitle mb-2 text-muted">
+                    Demo Website Created with Jquery
+                  </h6>
+                  <p class="card-text">
+                    This website was created for practice using Jquery.
+                  </p>
+                  <a
+                    target="_blank"
+                    href="https://sammcdo.github.io/CSCN-315-FrontEnd/project01/"
+                    class="btn btn-primary"
+                    >View Live Demo</a
+                  >
+                  <p></p>
+                  <a
+                    target="_blank"
+                    href="https://github.com/sammcdo/CSCN-315-FrontEnd/tree/main/project01"
+                    class="btn btn-primary"
+                    >View on Github</a
+                  >
+                </div>
+              </div> -->
+              <div class="card m-1 p-3 col-sm">
+                <img
+                  class="card-img-top card-img-bottom"
+                  src="https://github.com/sammcdo/ImageClassificationLive/blob/main/demo.png?raw=true"
+                  alt="Card image cap"
+                />
+                <div class="card-body">
+                  <h4 class="card-title">Live Image Detection</h4>
+                  <h6 class="card-subtitle mb-2 text-muted">
+                    Image Classification Done in a Web Browser
+                  </h6>
+                  <p class="card-text">
+                    A simple image classifier that can run live in a browser
+                    using prebuilt models.
+                  </p>
+                  <a
+                    target="_blank"
+                    href="https://sammcdo.github.io/ImageClassificationLive/"
+                    class="btn btn-primary"
+                    >View Live Demo</a
+                  >
+                  <p></p>
+                  <a
+                    target="_blank"
+                    href="https://github.com/sammcdo/ImageClassificationLive"
+                    class="btn btn-primary"
+                    >View on Github</a
+                  >
+                </div>
+              </div>
+              <div class="card m-1 p-3 col-sm">
+                <img
+                  class="card-img-top"
+                  src="https://github.com/sammcdo/WebEditor/blob/master/demo.png?raw=true"
+                  alt="Card image cap"
+                />
+                <div class="card-body">
+                  <h4 class="card-title">Web Editor</h4>
+                  <h6 class="card-subtitle mb-2 text-muted">
+                    Simple HTML Code Editor
+                  </h6>
+                  <p class="card-text">
+                    This IDE written in Python lets you write HTML with handy
+                    shortcuts built in.
+                  </p>
+                  <a
+                    target="_blank"
+                    href="https://github.com/sammcdo/WebEditor"
+                    class="btn btn-primary"
+                    >View on Github</a
+                  >
+                </div>
+              </div>
+              <div class="card m-1 p-3 col-sm">
+                <img
+                  class="card-img-top card-img-bottom"
+                  src="../img/nomadalliance.png"
+                  alt="Card image cap"
+                />
+                <div class="card-body">
+                  <h4 class="card-title">The Nomad Alliance</h4>
+                  <h6 class="card-subtitle mb-2 text-muted">
+                    Robotics Resource and Stats Tool
+                  </h6>
+                  <p class="card-text">
+                    This website offers our team resources for public use and
+                    provides statistics on teams.
+                  </p>
+                  <a
+                    target="_blank"
+                    href="https://sammcdo.github.io/NomadAllianceArchive"
+                    class="btn btn-primary"
+                    >View Live Demo</a
+                  >
+                  <p></p>
+                  <a
+                    target="_blank"
+                    href="https://github.com/sammcdo/WebEditor"
+                    class="btn btn-primary"
+                    >View on Github</a
+                  >
+                </div>
+              </div>
+            </div>
+            <!--
                     <div class="card m-1 p-3 col-sm">
                             <img
                                 class="card-img-top"
@@ -289,19 +623,19 @@
                         </div>
                         <div class="card m-1 p-3 col-sm">
                             <img
-                                class="card-img-top"
-                                src="https://github.com/sammcdo/WebEditor/blob/master/demo.png?raw=true"
+                                class="card-img-top card-img-bottom"
+                                src="https://github.com/sammcdo/CSCN112-AdvCpp/blob/main/FinalProject_EquipmentStorageSystem/demo.png?raw=true"
                                 alt="Card image cap"
                             />
                             <div class="card-body">
-                                <h4 class="card-title">Web Editor</h4>
+                                <h4 class="card-title">Inventory Management</h4>
                                 <h6 class="card-subtitle mb-2 text-muted">
-                                    Simple HTML Code Editor
+                                    A Terminal Based inventory system built with C++
                                 </h6>
                                 <p class="card-text">
-                                    This IDE written in Python lets you write HTML with handy shortcuts built in.
+                                    This project demonstates proficiency with C++ including inheritance, polymorphism, dynamic memory management, and operator overloading.
                                 </p>
-                                <a target="_blank" href="https://github.com/sammcdo/WebEditor" class="btn btn-primary"
+                                <a target="_blank" href="https://github.com/sammcdo/CSCN112-AdvCpp/tree/main/FinalProject_EquipmentStorageSystem" class="btn btn-primary"
                                     >View on Github</a
                                 >
                             </div>
@@ -327,14 +661,32 @@
                         </div>
                     </div>
                     -->
-                </div>
-            </main>
-
-            <footer class="mastfoot mt-auto">
-                <div class="inner">
-                    <p>Software Engineer</p>
-                </div>
-            </footer>
+          </div>
         </div>
-    </body>
+      </main>
+
+      <footer class="mastfoot mt-auto">
+        <div class="inner">
+          <p>Software Engineer</p>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      const toggleBtn = document.getElementById("toggleViewBtn");
+      const carouselView = document.getElementById("carouselView");
+      const gridView = document.getElementById("gridView");
+      let isCarousel = true;
+
+      toggleBtn.addEventListener("click", () => {
+        isCarousel = !isCarousel;
+        carouselView.classList.toggle("d-none", !isCarousel);
+        gridView.classList.toggle("d-none", isCarousel);
+        toggleBtn.textContent = isCarousel
+          ? "Switch to Table View"
+          : "Switch to Carousel View";
+      });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>
