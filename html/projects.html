@@ -1,126 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <meta name="description" content="Portfolio" />
-    <meta name="author" content="KingMcD" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Samuel McDowell - Projects & Portfolio" />
+    <meta name="author" content="Samuel McDowell" />
 
-    <title>Samuel McDowell</title>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J3E964WGYQ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-J3E964WGYQ');
+    </script>
+
+    <title>Samuel McDowell - Projects</title>
 
     <!-- Icon -->
     <link rel="icon" href="../img/logo.ico" type="image/png" sizes="16x16" />
 
-    <!-- Bootstrap core CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
-      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-      crossorigin="anonymous"
-    />
-
     <!-- Google Fonts -->
-    <link rel="stylesheet" href="../css/satoshi.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <!-- Custom styles for this template -->
-    <link href="../css/index.css" rel="stylesheet" />
-    <link href="../css/projects.css" rel="stylesheet" />
+    <!-- Custom styles -->
+    <link href="../css/modern.css" rel="stylesheet" />
+    <link href="../css/projects-modern.css" rel="stylesheet" />
+</head>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="../js/index.js" defer></script>
-  </head>
-
-  <body class="text-center">
-    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-      <header class="masthead">
-        <div class="inner">
-          <h3 class="masthead-brand name">Samuel McDowell</h3>
-          <nav class="nav nav-masthead justify-content-center">
-            <a class="nav-link" href="../index.html">Home</a>
-            <a class="nav-link active" href="#">Projects</a>
-            <a class="nav-link" href="../html/blog.html">Blog</a>
-            <a class="nav-link" href="../html/resume.html">Resume</a>
-            <a class="nav-link" href="../html/contact.html">Contact</a>
-          </nav>
-        </div>
-      </header>
-
-      <main role="main" class="inner cover">
-        <h1 class="cover-heading name">Projects</h1>
-        <hr />
-        <div class="d-flex justify-content-center mb-3">
-          <button id="toggleViewBtn" class="btn btn-outline-primary">
-            Switch to Table View
-          </button>
-        </div>
-
-        <!-- CAROUSEL VIEW (default) -->
-        <div id="carouselView">
-          <div id="projectCarousel" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner" id="carouselInner">
-              <!-- cards will be loaded here from partials -->
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="logo">
+                <a href="../index.html">
+                    <span class="logo-text">Samuel McDowell</span>
+                </a>
             </div>
-            <a
-              class="carousel-control-prev"
-              href="#projectCarousel"
-              role="button"
-              data-slide="prev"
-            >
-              <span
-                class="carousel-control-prev-icon"
-                aria-hidden="true"
-              ></span>
-            </a>
-            <a
-              class="carousel-control-next"
-              href="#projectCarousel"
-              role="button"
-              data-slide="next"
-            >
-              <span
-                class="carousel-control-next-icon"
-                aria-hidden="true"
-              ></span>
-            </a>
-          </div>
-        </div>
-
-        <!-- GRID VIEW -->
-        <div id="gridView" class="container d-none">
-          <div class="container">
-            <div id="gridCards">
-              <!-- cards will be loaded here from partials; rows of 3 will be created by JS -->
+            <div class="nav-menu">
+                <a href="../index.html" class="nav-link">Home</a>
+                <a href="projects.html" class="nav-link active">Projects</a>
+                <a href="blog.html" class="nav-link">Blog</a>
+                <a href="resume.html" class="nav-link">Resume</a>
+                <a href="contact.html" class="nav-link">Contact</a>
             </div>
-          </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
-      </main>
+    </nav>
 
-      <footer class="mastfoot mt-auto">
-        <div class="inner">
-          <p>Software Engineer</p>
+    <!-- Projects Header -->
+    <section class="projects-header">
+        <div class="container">
+            <h1 class="page-title">Projects & Work</h1>
+            <p class="page-subtitle">A selection of AI, ML, and full-stack projects I've built</p>
         </div>
-      </footer>
-    </div>
+    </section>
 
-    <script>
-      const toggleBtn = document.getElementById("toggleViewBtn");
-      const carouselView = document.getElementById("carouselView");
-      const gridView = document.getElementById("gridView");
-      let isCarousel = true;
+    <!-- Filter Section -->
+    <section class="projects-section">
+        <div class="container">
+            <div class="filter-container">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="ai">AI & Agents</button>
+                <button class="filter-btn" data-filter="ml">Machine Learning</button>
+                <button class="filter-btn" data-filter="data">Data Science</button>
+                <button class="filter-btn" data-filter="web">Web Development</button>
+            </div>
 
-      toggleBtn.addEventListener("click", () => {
-        isCarousel = !isCarousel;
-        carouselView.classList.toggle("d-none", !isCarousel);
-        gridView.classList.toggle("d-none", isCarousel);
-        toggleBtn.textContent = isCarousel
-          ? "Switch to Table View"
-          : "Switch to Carousel View";
-      });
-    </script>
-    <script src="../js/projects-cards.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.bundle.min.js"></script>
-  </body>
+            <!-- Projects Grid -->
+            <div class="projects-grid" id="projectsGrid">
+                <!-- Projects will be loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Have an interesting project idea?</h2>
+            <p>Let's collaborate and build something amazing together</p>
+            <a href="contact.html" class="btn btn-primary btn-large">Get in Touch</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2026 Samuel McDowell. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="contact.html">Contact</a>
+                    <a href="resume.html">Resume</a>
+                    <a href="blog.html">Blog</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../js/modern.js"></script>
+    <script src="../js/projects.js" defer></script>
+</body>
 </html>

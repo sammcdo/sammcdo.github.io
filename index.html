@@ -1,84 +1,256 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1, shrink-to-fit=no"
-        />
-        <meta name="description" content="Personal Website" />
-        <meta name="author" content="KingMcD" />
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Samuel McDowell - AI Developer, Data Scientist, Full Stack Engineer" />
+    <meta name="author" content="Samuel McDowell" />
 
-      <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-J3E964WGYQ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J3E964WGYQ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-J3E964WGYQ');
+    </script>
 
-  gtag('config', 'G-J3E964WGYQ');
-</script>
-<!-- End Google Tag Manager -->
+    <title>Samuel McDowell - AI Developer & Full Stack Engineer</title>
 
-        <title>Samuel McDowell</title>
+    <!-- Icon -->
+    <link rel="icon" href="img/logo.ico" type="image/png" sizes="16x16" />
 
-        <!-- Icon -->
-        <link rel="icon" href="img/logo.ico" type="image/png" sizes="16x16" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-        <!-- Bootstrap core CSS -->
-        <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
-            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-            crossorigin="anonymous"
-        />
+    <!-- Custom styles -->
+    <link href="./css/modern.css" rel="stylesheet" />
+</head>
 
-        <!-- Google Fonts -->
-        <link
-            rel="stylesheet"
-            href="./css/satoshi.css"
-        />
-
-        <!-- Custom styles for this template -->
-        <link href="./css/index.css" rel="stylesheet" />
-    </head>
-
-    <body class="text-center">
-        <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-            <header class="masthead mb-auto">
-                <div class="inner">
-                    <h3 class="masthead-brand name">Samuel McDowell</h3>
-                    <nav class="nav nav-masthead justify-content-center">
-                        <a class="nav-link active" href="#">Home</a>
-                        <a class="nav-link" href="html/projects.html"
-                            >Projects</a
-                        >
-                        <a class="nav-link" href="html/blog.html">Blog</a>
-                        <a class="nav-link" href="html/resume.html">Resume</a>
-                        <a class="nav-link" href="html/contact.html">Contact</a>
-                    </nav>
-                </div>
-            </header>
-
-            <main role="main" class="inner cover">
-                <h1 class="cover-heading name big_name">Samuel McDowell</h1>
-                <hr />
-                <p class="text skills">Software Engineer</p>
-                <p class="text skills">AI Developer</p>
-                <p class="text skills">Algorithm Designer</p>
-                <p class="text skills">Full Stack Engineer</p>
-                <p class="lead">
-                    <a href="html/contact.html" class="btn btn-lg btn-secondary" id="contact_btn"
-                        >Get in touch</a
-                    >
-                </p>
-            </main>
-
-            <footer class="mastfoot mt-auto">
-                <div class="inner">
-                    <p>Software Engineer</p>
-                </div>
-            </footer>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="logo">
+                <a href="index.html">
+                    <span class="logo-text">Samuel McDowell</span>
+                </a>
+            </div>
+            <div class="nav-menu">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="html/projects.html" class="nav-link">Projects</a>
+                <a href="html/blog.html" class="nav-link">Blog</a>
+                <a href="html/resume.html" class="nav-link">Resume</a>
+                <a href="html/contact.html" class="nav-link">Contact</a>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
-    </body>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-background">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+            <div class="gradient-orb orb-3"></div>
+        </div>
+
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    Building intelligent systems<br>
+                    <span class="gradient-text">that scale</span>
+                </h1>
+                <p class="hero-subtitle">
+                    AI Developer • Data Scientist • Full Stack Engineer
+                </p>
+                <p class="hero-description">
+                    I specialize in machine learning, data engineering, and building production-grade applications. Transforming complex problems into elegant solutions.
+                </p>
+                <div class="hero-cta">
+                    <a href="html/projects.html" class="btn btn-primary">View My Work</a>
+                    <a href="html/contact.html" class="btn btn-secondary">Get in Touch</a>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <div class="code-block">
+                    <div class="code-header">
+                        <span class="code-dot"></span>
+                        <span class="code-dot"></span>
+                        <span class="code-dot"></span>
+                    </div>
+                    <pre><code>
+<span class="code-keyword">def</span> <span class="code-function">build_systems</span>():
+    <span class="code-keyword">return</span> {
+        <span class="code-string">"ai"</span>: <span class="code-value">True</span>,
+        <span class="code-string">"data_science"</span>: <span class="code-value">True</span>,
+        <span class="code-string">"full_stack"</span>: <span class="code-value">True</span>,
+        <span class="code-string">"scale"</span>: <span class="code-value">True</span>
+    }
+                    </code></pre>
+                </div>
+            </div>
+        </div>
+
+        <div class="scroll-indicator">
+            <span>Scroll to explore</span>
+            <div class="scroll-arrow">↓</div>
+        </div>
+    </section>
+
+    <!-- Core Skills Section -->
+    <section class="skills-section">
+        <div class="container">
+            <h2 class="section-title">Core Expertise</h2>
+            <p class="section-subtitle">Technologies and domains I specialize in</p>
+
+            <div class="skills-grid">
+                <!-- AI / Machine Learning -->
+                <div class="skill-card card-ai">
+                    <div class="skill-icon">🤖</div>
+                    <h3 class="skill-title">AI & Machine Learning</h3>
+                    <p class="skill-description">
+                        Building neural networks, deep learning models, and intelligent systems using PyTorch, TensorFlow, and scikit-learn.
+                    </p>
+                    <div class="skill-tags">
+                        <span class="tag">PyTorch</span>
+                        <span class="tag">TensorFlow</span>
+                        <span class="tag">Neural Networks</span>
+                        <span class="tag">LLMs</span>
+                    </div>
+                </div>
+
+                <!-- Data Science -->
+                <div class="skill-card card-data">
+                    <div class="skill-icon">📊</div>
+                    <h3 class="skill-title">Data Science</h3>
+                    <p class="skill-description">
+                        Advanced analytics, statistical modeling, data visualization, and insights extraction from complex datasets using Spark and Iceberg.
+                    </p>
+                    <div class="skill-tags">
+                        <span class="tag">Spark</span>
+                        <span class="tag">Iceberg</span>
+                        <span class="tag">SQL</span>
+                        <span class="tag">R</span>
+                    </div>
+                </div>
+
+                <!-- Full Stack -->
+                <div class="skill-card card-fullstack">
+                    <div class="skill-icon">⚙️</div>
+                    <h3 class="skill-title">Full Stack Development</h3>
+                    <p class="skill-description">
+                        End-to-end web applications from responsive frontends to scalable backends, cloud infrastructure, and deployment on GCP and AWS.
+                    </p>
+                    <div class="skill-tags">
+                        <span class="tag">React</span>
+                        <span class="tag">GCP</span>
+                        <span class="tag">AWS</span>
+                        <span class="tag">Docker</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Capabilities -->
+    <section class="capabilities-section">
+        <div class="container">
+            <h2 class="section-title">What I Build</h2>
+
+            <div class="capabilities-grid">
+                <div class="capability-item">
+                    <div class="capability-number">01</div>
+                    <h3>Agentic Development</h3>
+                    <p>Building intelligent autonomous agents and multi-agent systems that reason, plan, and take action using LLMs and APIs.</p>
+                </div>
+
+                <div class="capability-item">
+                    <div class="capability-number">02</div>
+                    <h3>End-to-End ML Systems</h3>
+                    <p>From data collection and preprocessing to model training, evaluation, and production deployment with monitoring.</p>
+                </div>
+
+                <div class="capability-item">
+                    <div class="capability-number">03</div>
+                    <h3>Data Pipelines & Analytics</h3>
+                    <p>Robust ETL pipelines, data warehouses, and analytics solutions for extracting actionable insights.</p>
+                </div>
+
+                <div class="capability-item">
+                    <div class="capability-number">04</div>
+                    <h3>Web Applications</h3>
+                    <p>Responsive, performant web apps with modern frontend frameworks and scalable backend infrastructure.</p>
+                </div>
+
+                <div class="capability-item">
+                    <div class="capability-number">05</div>
+                    <h3>Data Visualization</h3>
+                    <p>Interactive dashboards and visual storytelling that transforms complex data into meaningful insights.</p>
+                </div>
+
+                <div class="capability-item">
+                    <div class="capability-number">06</div>
+                    <h3>System Architecture</h3>
+                    <p>Scalable, maintainable system design with containerization, orchestration, and cloud deployment.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">15+</div>
+                    <p class="stat-label">Projects Completed</p>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">50+</div>
+                    <p class="stat-label">ML Models Trained</p>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">100K+</div>
+                    <p class="stat-label">Data Points Analyzed</p>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">5+</div>
+                    <p class="stat-label">Years of Experience</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Let's Build Something Amazing</h2>
+            <p>Have an interesting project or opportunity? I'd love to hear about it.</p>
+            <a href="html/contact.html" class="btn btn-primary btn-large">Start a Conversation</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2026 Samuel McDowell. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="html/contact.html">Contact</a>
+                    <a href="html/resume.html">Resume</a>
+                    <a href="html/blog.html">Blog</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="./js/modern.js"></script>
+</body>
 </html>

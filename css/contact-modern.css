@@ -1,0 +1,139 @@
+/* Contact Page Styles */
+
+.contact-header {
+    margin-top: 80px;
+    padding: 5rem 0 3rem;
+    text-align: center;
+    background: linear-gradient(180deg, rgba(6, 182, 212, 0.13) 0%, rgba(10, 14, 39, 0) 100%);
+}
+
+.contact-header .page-title {
+    margin-bottom: 0.75rem;
+}
+
+.contact-header .page-subtitle {
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+.contact-main {
+    padding: 1rem 0 4rem;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 1.2rem;
+}
+
+.contact-panel {
+    background: rgba(15, 21, 53, 0.72);
+    border: 1px solid rgba(99, 102, 241, 0.24);
+    border-radius: 14px;
+    padding: 1.4rem;
+    margin-left: 20%;
+    margin-right: 20%;
+    backdrop-filter: blur(10px);
+}
+
+.contact-panel h2 {
+    font-size: 1.45rem;
+    margin-bottom: 0.5rem;
+}
+
+.contact-panel p {
+    margin-bottom: 1rem;
+}
+
+.contact-list {
+    list-style: none;
+    display: grid;
+    gap: 0.7rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.8rem;
+    padding: 0.75rem 0.9rem;
+    border-radius: 10px;
+    border: 1px solid rgba(99, 102, 241, 0.22);
+    background: rgba(99, 102, 241, 0.06);
+}
+
+.contact-item strong {
+    color: var(--color-text);
+    font-weight: 600;
+}
+
+.contact-item a {
+    color: var(--color-accent-4);
+    word-break: break-word;
+}
+
+.contact-card-grid {
+    display: grid;
+    gap: 0.8rem;
+}
+
+.contact-action {
+    border: 1px solid rgba(99, 102, 241, 0.22);
+    background: rgba(99, 102, 241, 0.08);
+    border-radius: 12px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    transition: var(--transition);
+}
+
+.contact-action:hover {
+    transform: translateY(-2px);
+    border-color: rgba(99, 102, 241, 0.5);
+    box-shadow: 0 10px 24px rgba(3, 7, 18, 0.4);
+}
+
+.action-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.action-label {
+    font-size: 0.9rem;
+    color: var(--color-text-light);
+}
+
+.action-title {
+    font-size: 1rem;
+    color: var(--color-text);
+    font-weight: 700;
+}
+
+.contact-availability {
+    margin-top: 1rem;
+    padding: 0.8rem 1rem;
+    border-left: 3px solid var(--color-success);
+    background: rgba(16, 185, 129, 0.08);
+    color: var(--color-text-light);
+}
+
+@media (max-width: 900px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-header {
+        padding: 4rem 0 2.5rem;
+    }
+
+    .contact-item,
+    .contact-action {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
