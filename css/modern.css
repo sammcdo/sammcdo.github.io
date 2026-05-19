@@ -7,15 +7,15 @@
     --color-bg-light: #0f1535;
     --color-text: #e0e0e0;
     --color-text-light: #a0a0a0;
-    --color-accent-1: #6366f1;
-    --color-accent-2: #8b5cf6;
-    --color-accent-3: #ec4899;
-    --color-accent-4: #06b6d4;
+    --color-accent-1: #2d6a4f;
+    --color-accent-2: #1b4332;
+    --color-accent-3: #40916c;
+    --color-accent-4: #52b788;
     --color-success: #10b981;
     
-    --gradient-1: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
-    --gradient-2: linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%);
-    --gradient-3: linear-gradient(135deg, #06b6d4 0%, #6366f1 100%);
+    --gradient-1: linear-gradient(135deg, #3e8163 0%, #2f624c 100%);
+    --gradient-2: linear-gradient(135deg, #1b4332 0%, #40916c 100%);
+    --gradient-3: linear-gradient(135deg, #52b788 0%, #2d6a4f 100%);
     
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -97,7 +97,7 @@ a:hover {
     background: rgba(10, 14, 39, 0.8);
     backdrop-filter: blur(10px);
     z-index: 1000;
-    border-bottom: 1px solid rgba(99, 102, 241, 0.1);
+    border-bottom: 1px solid rgba(45, 106, 79, 0.1);
 }
 
 .navbar-container {
@@ -316,6 +316,7 @@ a:hover {
     display: inline-block;
     text-align: center;
     white-space: nowrap;
+    text-decoration: none;
 }
 
 .btn-primary {
@@ -339,7 +340,7 @@ a:hover {
 
 .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 10px 30px rgba(99, 102, 241, 0.3);
+    box-shadow: 0 10px 30px rgba(45, 106, 79, 0.3);
 }
 
 .btn-secondary {
@@ -349,7 +350,7 @@ a:hover {
 }
 
 .btn-secondary:hover {
-    background: rgba(99, 102, 241, 0.1);
+    background: rgba(45, 106, 79, 0.1);
     border-color: var(--color-accent-2);
     color: var(--color-accent-2);
 }
@@ -365,7 +366,7 @@ a:hover {
 
 .code-block {
     background: rgba(15, 21, 53, 0.8);
-    border: 1px solid rgba(99, 102, 241, 0.2);
+    border: 1px solid rgba(45, 106, 79, 0.2);
     border-radius: 12px;
     overflow: hidden;
     animation: fadeInRight 0.8s ease-out 0.2s backwards;
@@ -388,7 +389,7 @@ a:hover {
     display: flex;
     gap: 0.5rem;
     padding: 1rem;
-    border-bottom: 1px solid rgba(99, 102, 241, 0.1);
+    border-bottom: 1px solid rgba(45, 106, 79, 0.1);
 }
 
 .code-dot {
@@ -507,7 +508,7 @@ code {
 
 .skill-card {
     background: rgba(15, 21, 53, 0.6);
-    border: 1px solid rgba(99, 102, 241, 0.2);
+    border: 1px solid rgba(45, 106, 79, 0.2);
     border-radius: 12px;
     padding: 2rem;
     transition: var(--transition);
@@ -535,9 +536,9 @@ code {
 }
 
 .skill-card:hover {
-    border-color: rgba(99, 102, 241, 0.5);
+    border-color: rgba(45, 106, 79, 0.5);
     transform: translateY(-5px);
-    box-shadow: 0 15px 40px rgba(99, 102, 241, 0.2);
+    box-shadow: 0 15px 40px rgba(45, 106, 79, 0.2);
 }
 
 .card-data::before {
@@ -577,7 +578,7 @@ code {
 
 .tag {
     display: inline-block;
-    background: rgba(99, 102, 241, 0.1);
+    background: rgba(45, 106, 79, 0.1);
     color: var(--color-accent-1);
     padding: 0.4rem 0.8rem;
     border-radius: 20px;
@@ -587,8 +588,8 @@ code {
 }
 
 .skill-card:hover .tag {
-    background: rgba(99, 102, 241, 0.2);
-    color: var(--color-accent-2);
+    background: rgba(45, 106, 79, 0.2);
+    color: var(--color-accent-4);
 }
 
 /* ============================================
@@ -640,9 +641,9 @@ code {
 
 .stats-section {
     padding: 4rem 2rem;
-    background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%);
-    border-top: 1px solid rgba(99, 102, 241, 0.2);
-    border-bottom: 1px solid rgba(99, 102, 241, 0.2);
+    background: linear-gradient(135deg, rgba(45, 106, 79, 0.1) 0%, rgba(27, 67, 50, 0.1) 100%);
+    border-top: 1px solid rgba(45, 106, 79, 0.2);
+    border-bottom: 1px solid rgba(45, 106, 79, 0.2);
 }
 
 .stats-grid {
@@ -703,7 +704,7 @@ code {
 .footer {
     padding: 2rem;
     background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.3) 100%);
-    border-top: 1px solid rgba(99, 102, 241, 0.1);
+    border-top: 1px solid rgba(45, 106, 79, 0.1);
     text-align: center;
 }
 

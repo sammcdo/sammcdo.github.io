@@ -26,7 +26,7 @@ body {
     right: -10%;
     width: 400px;
     height: 400px;
-    background: radial-gradient(circle, rgba(99, 102, 241, 0.1) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(45, 106, 79, 0.1) 0%, transparent 70%);
     border-radius: 50%;
     z-index: 0;
 }
@@ -38,7 +38,7 @@ body {
     left: -5%;
     width: 300px;
     height: 300px;
-    background: radial-gradient(circle, rgba(139, 92, 246, 0.1) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(27, 67, 50, 0.1) 0%, transparent 70%);
     border-radius: 50%;
     z-index: 0;
 }
@@ -84,7 +84,7 @@ body {
 .filter-btn {
     padding: 0.75rem 1.5rem;
     border-radius: 30px;
-    border: 2px solid rgba(99, 102, 241, 0.3);
+    border: 2px solid rgba(45, 106, 79, 0.3);
     background: transparent;
     color: var(--color-text-light);
     font-weight: 600;
@@ -138,7 +138,7 @@ body {
 
 .project-card {
     background: rgba(15, 21, 53, 0.6);
-    border: 1px solid rgba(99, 102, 241, 0.2);
+    border: 1px solid rgba(45, 106, 79, 0.2);
     border-radius: 16px;
     overflow: hidden;
     transition: var(--transition);
@@ -152,8 +152,8 @@ body {
 
 .project-card:hover {
     transform: translateY(-8px);
-    border-color: rgba(99, 102, 241, 0.5);
-    box-shadow: 0 20px 50px rgba(99, 102, 241, 0.2);
+    border-color: rgba(45, 106, 79, 0.5);
+    box-shadow: 0 20px 50px rgba(45, 106, 79, 0.2);
 }
 
 /* Image Container */
@@ -162,7 +162,7 @@ body {
     width: 100%;
     height: 320px;
     overflow: hidden;
-    background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%);
+    background: linear-gradient(135deg, rgba(45, 106, 79, 0.1) 0%, rgba(27, 67, 50, 0.1) 100%);
 }
 
 .project-image img {
@@ -184,7 +184,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, rgba(99, 102, 241, 0.2) 0%, rgba(236, 72, 153, 0.2) 100%);
+    background: linear-gradient(135deg, rgba(45, 106, 79, 0.2) 0%, rgba(236, 72, 153, 0.2) 100%);
     opacity: 0;
     transition: opacity 0.3s ease;
     z-index: 2;
@@ -202,7 +202,7 @@ body {
     width: 100%;
     height: 100%;
     font-size: 3rem;
-    background: linear-gradient(135deg, rgba(99, 102, 241, 0.15) 0%, rgba(139, 92, 246, 0.15) 100%);
+    background: linear-gradient(135deg, rgba(45, 106, 79, 0.15) 0%, rgba(27, 67, 50, 0.15) 100%);
 }
 
 /* Content Container */
@@ -247,7 +247,7 @@ body {
 
 .project-tag {
     display: inline-block;
-    background: rgba(99, 102, 241, 0.1);
+    background: rgba(45, 106, 79, 0.1);
     color: var(--color-accent-1);
     padding: 0.3rem 0.7rem;
     border-radius: 15px;
@@ -257,7 +257,7 @@ body {
 }
 
 .project-card:hover .project-tag {
-    background: rgba(99, 102, 241, 0.2);
+    background: rgba(45, 106, 79, 0.2);
     color: var(--color-accent-2);
 }
 
@@ -275,7 +275,7 @@ body {
     font-weight: 600;
     text-decoration: none;
     transition: var(--transition);
-    border: 1px solid rgba(99, 102, 241, 0.3);
+    border: 1px solid rgba(45, 106, 79, 0.3);
     color: var(--color-accent-1);
     flex: 1;
     min-width: 100px;
@@ -283,7 +283,7 @@ body {
 }
 
 .project-link:hover {
-    background: rgba(99, 102, 241, 0.2);
+    background: rgba(45, 106, 79, 0.2);
     border-color: var(--color-accent-1);
     color: var(--color-accent-2);
 }
